@@ -22,7 +22,9 @@
           <p>{{message}}</p>
 
           <hr>
-          <show-info men="men"></show-info>
+          <div ng-repeat="man in men">
+              <show-info></show-info>
+          </div>
         </div>
     </body>
 </html>

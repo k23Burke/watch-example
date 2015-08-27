@@ -11,7 +11,7 @@ gulp.task('buildJS', function () {
   return gulp.src(['./src/app.js', './src/javascripts/*.js'])
     .pipe(plumber())
     .pipe(concat('main.js'))
-    // .pipe(babel())
+    .pipe(babel())
     .pipe(gulp.dest('./example/'))
 });
 

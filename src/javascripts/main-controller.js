@@ -1,4 +1,4 @@
-app.controller('MainController', function ($scope, ManFactory, $timeout) {
+app.controller('MainController', ($scope, ManFactory, $timeout) => {
   $scope.number = 0;
   $scope.message = "This is a message to all y'all";
   $scope.men = [];
@@ -7,10 +7,9 @@ app.controller('MainController', function ($scope, ManFactory, $timeout) {
   man.addCar('Chevy', 'Malibu', 'Orange');
   man.addCar('Honda', 'Accord', 'Steel');
 
-  $timeout(function () {
+  $timeout(() => {
     man.addCar('Honda', 'Accord', 'Steel');
   }, 1000);
-
 
   $scope.men.push(man)
 })
