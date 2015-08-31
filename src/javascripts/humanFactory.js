@@ -1,16 +1,15 @@
-app.factory('ManFactory', function() {
-  var Man = function(name, hairColor, heightInFeet) {
+app.factory('HumanFactory', function() {
+  var Human = function(name, hairColor) {
     this.name = name;
     this.hair = hairColor;
-    this.height = heightInFeet;
     this.cars = [];
   }
 
-  Man.prototype.changeHair = function (newColor) {
+  Human.prototype.changeHair = function (newColor) {
     this.hair = newColor;
   }
 
-  Man.prototype.addCar = function (carMake, carModel, carColor) {
+  Human.prototype.addCar = function (carMake, carModel, carColor) {
     this.cars.push(carCreator(carMake, carModel, carColor));
   }
 
@@ -23,5 +22,5 @@ app.factory('ManFactory', function() {
   }
 
 
-  return Man;
+  return Human;
 })
